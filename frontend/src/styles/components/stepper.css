@@ -1,0 +1,77 @@
+/* ==========================================================================
+   FUNDSY STEPPER & WIZARD STYLES
+   ========================================================================== */
+
+.stepper-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.stepper-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  gap: 0.5rem;
+}
+
+.stepper-bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  border: 2px solid var(--border-default);
+  background-color: var(--surface-primary);
+  color: var(--text-muted);
+  transition: all var(--transition-normal);
+}
+
+.stepper-step-active .stepper-bubble {
+  border-color: var(--accent);
+  background-color: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 0 0 4px var(--accent-light);
+}
+
+.stepper-step-completed .stepper-bubble {
+  border-color: var(--success);
+  background-color: var(--success);
+  color: #ffffff;
+}
+
+.stepper-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.stepper-step-active .stepper-label {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.stepper-line {
+  position: absolute;
+  top: 1.125rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--border-subtle);
+  z-index: 1;
+}
+
+.stepper-line-progress {
+  height: 100%;
+  background-color: var(--accent);
+  transition: width var(--transition-smooth);
+}

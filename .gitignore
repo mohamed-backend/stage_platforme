@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Database
+*.sqlite3
+db.sqlite3
+
+# Logs
+*.log
+django.log
+django-error.log
+
+# Build outputs
+dist/
+build/
+staticfiles/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+playwright-report/
+test-results/
+
+# Temporary files
+*_id.txt
+inv_id.txt
+listing_id.txt
+pay_id.txt
+pool_id.txt
+project_id.txt
+
+# Distribution
+*.egg-info/
+*.egg

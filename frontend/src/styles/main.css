@@ -1,0 +1,27 @@
+/* ==========================================================================
+   FUNDSY MASTER STYLESHEET
+   ========================================================================== */
+
+/* BASE */
+@import "./variables.css";
+@import "./base.css";
+
+/* COMPONENTS */
+@import "./components/button.css";
+@import "./components/badge.css";
+@import "./components/card.css";
+@import "./components/project-card.css";
+@import "./components/stat-card.css";
+@import "./components/forms.css";
+@import "./components/modal.css";
+@import "./components/table.css";
+@import "./components/stepper.css";
+
+/* LAYOUT */
+@import "./layout/header.css";
+@import "./layout/sidebar.css";
+@import "./layout/footer.css";
+@import "./layout/bottom-nav.css";
+
+/* PAGES */
+@import "./pages/landing.css";

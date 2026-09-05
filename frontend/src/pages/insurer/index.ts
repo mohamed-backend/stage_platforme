@@ -1,0 +1,5 @@
+export { default as InsurerDashboardPage } from './InsurerDashboardPage'
+export { default as InsurerKYCReviewPage } from './InsurerKYCReviewPage'
+export { default as InsurerProjectReviewPage } from './InsurerProjectReviewPage'
+export { default as InsurerCoveragePage } from './InsurerCoveragePage'
+export { default as InsurerReportingPage } from './InsurerReportingPage'

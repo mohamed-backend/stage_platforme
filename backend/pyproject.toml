@@ -1,0 +1,90 @@
+[project]
+name = "stage-platform"
+version = "0.1.0"
+description = "Stage Platform - Participatory Investment Platform"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = [
+    "venv",
+    ".git",
+    "__pycache__",
+    "migrations",
+    "*.pyc",
+    "db.sqlite3",
+    "server.log",
+    "server.err",
+    "django.log",
+    "django-error.log",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # pyflakes
+    "I",      # isort
+    "UP",     # pyupgrade
+    "B",      # flake8-bugbear
+    "C4",     # flake8-comprehensions
+    "SIM",    # flake8-simplify
+    "T20",    # flake8-print
+    "PT",     # flake8-pytest-style
+    "ARG",    # flake8-unused-arguments
+    "ERA",    # eradicate (commented out code)
+    "RUF",    # ruff-specific rules
+    "PL",     # pylint
+    "TRY",    # tryceratops
+    "NPY",    # numpy
+    "ASYNC",  # async
+    "TCH",    # type-checking
+]
+ignore = [
+    "E501",   # line too long (handled by formatter)
+    "D100",   # missing docstring for public module
+    "D101",   # missing docstring for public class
+    "D102",   # missing docstring for public method
+    "D103",   # missing docstring for public function
+    "D104",   # missing docstring for public package
+    "D105",   # missing docstring for magic method
+    "D106",   # missing docstring for public nested class
+    "D107",   # missing docstring for __init__
+    "S101",   # assert statement
+    "TRY003", # avoid specifying long messages outside exceptions
+    "RUF012", # mutable default argument
+    "T201",   # print statement
+    "ARG002", # unused method argument (required by DRF framework)
+    "PLR0911", # too many return statements
+    "PLR0912", # too many branches
+    "PLR0913", # too many arguments
+    "PLR0915", # too many statements
+    "PLR0917", # too many positional arguments
+    "RUF005",  # iterable unpacking vs concatenation (Django admin convention)
+]
+[tool.ruff.lint.per-file-ignores]
+"*/migrations/*.py" = ["ALL"]
+"*/tests.py" = ["S101", "T201", "PT009", "PT010", "PT011", "F841"]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "users",
+    "projects",
+    "pools",
+    "investments",
+    "payments",
+    "transactions",
+    "secondary_market",
+    "notifications",
+    "risk_management",
+    "insurer",
+    "claims",
+    "config",
+]
+section-order = ["stdlib", "thirdparty", "firstparty", "localfolder"]
+default-section = "thirdparty"
+
+[tool.ruff.format]
+quote-style = "single"

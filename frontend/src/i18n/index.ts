@@ -1,0 +1,126 @@
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
+
+const resources = {
+  fr: {
+    translation: {
+      common: {
+        loading: 'Chargement...',
+        error: 'Une erreur est survenue',
+        save: 'Enregistrer',
+        cancel: 'Annuler',
+        confirm: 'Confirmer',
+        delete: 'Supprimer',
+        edit: 'Modifier',
+        back: 'Retour',
+        search: 'Rechercher',
+        noData: 'Aucune donnée disponible',
+        submit: 'Envoyer',
+        close: 'Fermer',
+      },
+      nav: {
+        home: 'Accueil',
+        projects: 'Projets',
+        investments: 'Investissements',
+        market: 'Marché',
+        dashboard: 'Tableau de bord',
+        profile: 'Profil',
+        admin: 'Administration',
+        login: 'Connexion',
+        register: "S'inscrire",
+        logout: 'Déconnexion',
+        notifications: 'Notifications',
+      },
+      auth: {
+        login: 'Connexion',
+        register: 'Inscription',
+        email: 'Adresse email',
+        username: "Nom d'utilisateur",
+        password: 'Mot de passe',
+        confirmPassword: 'Confirmer le mot de passe',
+        rememberMe: 'Se souvenir de moi',
+        forgotPassword: 'Mot de passe oublié ?',
+        noAccount: "Pas encore de compte ?",
+        hasAccount: 'Déjà un compte ?',
+        createAccount: 'Créer un compte',
+        loginHere: 'Connectez-vous ici',
+      },
+      landing: {
+        heroTitle: 'Investissez dans l\'avenir, ensemble',
+        heroSubtitle: 'Plateforme d\'investissement participatif sécurisée et transparente',
+        cta: 'Découvrir les projets',
+        cta2: 'Commencer à investir',
+        stats: 'Statistiques',
+        features: 'Fonctionnalités',
+        security: 'Sécurité',
+      },
+      projects: {
+        title: 'Projets',
+        detail: 'Détail du projet',
+        invest: 'Investir',
+        target: 'Objectif',
+        collected: 'Collecté',
+        remaining: 'Restant',
+        duration: 'Durée',
+        return: 'Rendement',
+        risk: 'Risque',
+        status: 'Statut',
+      },
+      investments: {
+        title: 'Mes Investissements',
+        amount: 'Montant',
+        status: 'Statut',
+        project: 'Projet',
+        date: 'Date',
+        create: 'Nouvel investissement',
+      },
+      payments: {
+        title: 'Mes Paiements',
+        method: 'Méthode',
+        status: 'Statut',
+        reference: 'Référence',
+        confirm: 'Confirmer le paiement',
+      },
+      transactions: {
+        title: 'Transactions',
+        type: 'Type',
+        amount: 'Montant',
+        reference: 'Référence',
+        date: 'Date',
+      },
+      market: {
+        title: 'Marché Secondaire',
+        myListings: 'Mes annonces',
+        buy: 'Acheter',
+        sell: 'Vendre',
+        price: 'Prix',
+      },
+      risk: {
+        title: 'Gestion des Risques',
+        score: 'Score de risque',
+        level: 'Niveau',
+        probability: 'Probabilité',
+        impact: 'Impact',
+      },
+      admin: {
+        title: 'Administration',
+        users: 'Utilisateurs',
+        projects: 'Projets',
+        investments: 'Investissements',
+        payments: 'Paiements',
+        transactions: 'Transactions',
+      },
+    },
+  },
+}
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng: 'fr',
+  fallbackLng: 'fr',
+  interpolation: {
+    escapeValue: false,
+  },
+})
+
+export default i18n

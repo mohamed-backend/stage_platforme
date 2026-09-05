@@ -1,0 +1,41 @@
+/* ==========================================================================
+   FUNDSY CARD SYSTEM
+   ========================================================================== */
+
+.card {
+  background-color: var(--surface-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-smooth);
+}
+
+.card-padded {
+  padding: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .card-padded {
+    padding: 2rem;
+  }
+}
+
+.card-hoverable:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-default);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
